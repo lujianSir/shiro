@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:shiro="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>添加用户</title>
+</head>
+<body>
+<h1>用户添加</h1>
+<!-- 判断是否有删除权限 -->
+<div shiro:hasPermission="ceshi1">
+    进入用户添加：<a href="toDelete">用户删除</a><br />
+</div>
+
+<!-- 判断是否有修改权限 -->
+<div shiro:hasPermission="ceshi2">
+    进入用户添加：<a href="toQuery">用户查询</a><br />
+</div>
+</body>
+</html>

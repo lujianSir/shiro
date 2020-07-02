@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:shiro="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+</head>
+<body>
+<h1 align="center" th:text="${msg}"></h1>
+
+<!-- 判断是否有添加权限 -->
+<div shiro:hasPermission="add">
+    进入用户添加：<a href="toAdd">用户添加</a><br />
+</div>
+<!-- 判断是否有删除权限 -->
+<div shiro:hasPermission="delete">
+    进入用户添加：<a href="toDelete">用户删除</a><br />
+</div>
+
+<!-- 判断是否有修改权限 -->
+<div shiro:hasPermission="query">
+    进入用户添加：<a href="toQuery">用户查询</a><br />
+</div>
+
+<!-- 判断是否有更新权限 -->
+<div shiro:hasPermission="update">
+    进入用户更新：<a href="toUpdate">用户更新</a><br />
+</div>
+
+<a href="toLogin">登录</a>
+</body>
+</html>
